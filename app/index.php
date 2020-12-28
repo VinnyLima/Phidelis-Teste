@@ -4,7 +4,7 @@ $dbuser = $_ENV['MYSQL_USER'];
 $dbpass = $_ENV['MYSQL_PASS'];
 
 try {
-    $pdo = new PDO("mysql:host=mysql;dbname=blog", $dbuser, $dbpass);
+    $pdo = new PDO("mysql:host=mysql;dbname=wp-phidelis", $dbuser, $dbpass);
     $statement = $pdo->prepare("SELECT * FROM posts");
     $statement->execute();
     $posts = $statement->fetchAll(PDO::FETCH_OBJ);

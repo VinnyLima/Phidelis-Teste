@@ -7,7 +7,7 @@ services:
       - "./app:/var/www/html"
       - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - php
 
@@ -23,7 +23,7 @@ services:
       - mysql
     environment:
       - MYSQL_USER=root
-      - MYSQL_PASS=123.456
+      - MYSQL_PASS=phidelis@#
   
   # Data persistence service layer
   mysql:
@@ -34,7 +34,7 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=123.456
+      - MYSQL_ROOT_PASSWORD=phidelis@#
 
 volumes:
   db_data:
